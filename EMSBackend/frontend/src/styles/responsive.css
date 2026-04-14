@@ -1,0 +1,84 @@
+@media (max-width: 900px) {
+  .auth-shell {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 980px) {
+  .auth-shell,
+  .workspace-grid,
+  .employee-management-grid,
+  .toolbar,
+  .hero-panel,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar,
+  .topbar-user {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .topbar-user-copy {
+    justify-items: start;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .panel-wide {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .auth-shell,
+  .dashboard-shell {
+    width: min(100% - 20px, 1200px);
+    padding-top: 20px;
+  }
+
+  .auth-hero,
+  .auth-card,
+  .hero-copy,
+  .hero-card,
+  .panel {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-grid,
+  .health-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-row {
+    grid-template-columns: auto 1fr;
+  }
+
+  .employee-dept,
+  .status-pill,
+  .record-actions {
+    grid-column: 2;
+  }
+
+  .task-card {
+    grid-template-columns: 1fr;
+  }
+
+  .task-meta {
+    text-align: left;
+  }
+
+  .timeline-row {
+    grid-template-columns: 64px 14px 1fr;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "name": "EMSBackend",
+      "path": "EMSBackend"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/obj": true,
+      "**/bin": true
+    }
+  }
+}

@@ -1,0 +1,246 @@
+.hero-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.28fr) minmax(300px, 0.72fr);
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  margin: 28px 0 22px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.primary-button {
+  color: #04111f;
+  background: linear-gradient(135deg, #7dd3fc, #c084fc);
+}
+
+.secondary-button {
+  color: #e2e8f0;
+  background: rgba(30, 41, 59, 0.72);
+  border-color: rgba(148, 163, 184, 0.24);
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled,
+.secondary-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-badges span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(125, 211, 252, 0.1);
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  color: #dbeafe;
+  font-size: 0.92rem;
+}
+
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+}
+
+.hero-card::after {
+  content: '';
+  position: absolute;
+  inset: auto -80px -100px auto;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(192, 132, 252, 0.34), transparent 70%);
+}
+
+.hero-card-header,
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.hero-card-header {
+  color: #e2e8f0;
+  margin-bottom: 18px;
+}
+
+.hero-card-summary {
+  margin: 0 0 18px;
+  max-width: 32ch;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.pulse {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 0 8px rgba(52, 211, 153, 0.12);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.hero-summary-grid {
+  gap: 10px;
+}
+
+.metric-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "label value"
+    "meta meta";
+  align-items: start;
+  gap: 4px 16px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.82), rgba(30, 41, 59, 0.65));
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.summary-card {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(27, 37, 59, 0.76));
+  border-color: rgba(148, 163, 184, 0.1);
+}
+
+.metric-card:hover,
+.panel:hover,
+.sidebar-block:hover,
+.hero-card:hover,
+.hero-copy:hover {
+  border-color: rgba(125, 211, 252, 0.22);
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+}
+
+.metric-card p,
+.metric-card span,
+.employee-meta span,
+.task-card p,
+.timeline-copy p,
+.health-grid span {
+  color: #94a3b8;
+}
+
+.metric-card p,
+.metric-card span,
+.task-card p,
+.timeline-copy p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.metric-card p {
+  grid-area: label;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.summary-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  color: #8fb7d8;
+}
+
+.metric-card strong {
+  grid-area: value;
+  margin: 0;
+  font-size: clamp(1.45rem, 2vw, 1.75rem);
+  line-height: 1;
+  color: #f8fafc;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+.metric-card span {
+  grid-area: meta;
+  font-size: 0.88rem;
+}
+
+.summary-value {
+  font-size: clamp(1.3rem, 1.9vw, 1.65rem);
+}
+
+.summary-meta {
+  color: #9fb0c7;
+}
+
+.panel-tag {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.12);
+  color: #e2e8f0;
+  font-size: 0.85rem;
+}
+
+.panel-tag.accent {
+  background: rgba(192, 132, 252, 0.14);
+}
+
+.panel-tag.success,
+.status-pill {
+  background: rgba(52, 211, 153, 0.12);
+  color: #bbf7d0;
+}
+
+.health-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.health-grid div {
+  display: grid;
+  align-items: center;
+  gap: 8px;
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.62);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.health-grid strong {
+  color: #f8fafc;
+}
